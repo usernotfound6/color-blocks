@@ -13,6 +13,8 @@ $('#blocks').on('click', '.block.red-fill', deleteRedblock)
 $('#blocks').on('click', '.block.blue-fill', deleteBlueblock)
 $('#blocks').on('click', '.block.green-fill', deleteGreenblock)
 $('#blocks').on('click', '.block.yellow-fill', deleteYellowblock)
+
+$('block-counts').on('click', "red-count", addOne)
 }
 
 function makeRedblock() {
@@ -43,21 +45,29 @@ function makeRedblock() {
     `);
   }
 
-  function deleteRedblock() {
+  //function deleteRedblock() {
     $(this).remove()
     console.log($(this))
-  }
+//}
 
-  function deleteBlueblock() {
+ // function deleteBlueblock() {
     $(this).remove()
     console.log($(this))
-  }
-  function deleteGreenblock() {
+ //}
+  // function deleteGreenblock() {
     $(this).remove()
     console.log($(this))
-  }
+//}
 
-  function deleteYellowblock() {
+ // function deleteYellowblock() {
     $(this).remove()
     console.log($(this))
-  }
+//}
+
+
+
+$('#red-count').text(addOne); 
+
+function addOne() {
+  $('#red-count')+ 1
+}
